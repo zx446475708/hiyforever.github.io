@@ -277,7 +277,7 @@ highlight_theme: normal
 
 # MathJax Support
 mathjax:
-  enable: true
+  enable: false
   per_page: false
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
@@ -298,10 +298,10 @@ disqus:
   count: true
 
 # Hypercomments
-#hypercomments_id:
+hypercomments_id: 92037
 
 # Gentie productKey
-gentie_productKey: 3a9d7447a58d479c8e4324fa8c3eada4
+# gentie_productKey: 3a9d7447a58d479c8e4324fa8c3eada4
 
 # changyan
 changyan:
