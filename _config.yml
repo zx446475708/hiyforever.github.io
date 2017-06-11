@@ -69,3 +69,12 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Algolia
+algolia:
+  applicationID: 'UE83X7LW1Z'
+  apiKey: 'c6a3d717fb81d9efaa928409259b272e'
+  adminApiKey: 'b336a91b0afffeea6eb53dd49e6353ec'
+  indexName: 'miku.blog'
+  chunkSize: 5000
+  

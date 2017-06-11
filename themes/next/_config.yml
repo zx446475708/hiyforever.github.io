@@ -298,7 +298,7 @@ disqus:
   count: true
 
 # Hypercomments
-hypercomments_id: 92037
+# hypercomments_id: 92037
 
 # Gentie productKey
 # gentie_productKey: 3a9d7447a58d479c8e4324fa8c3eada4
@@ -311,7 +311,7 @@ changyan:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
+youyan_uid: 2136226
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -325,7 +325,7 @@ changyan:
 ##  type: button
 
 # Share
-# jiathis:
+# jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
@@ -443,13 +443,13 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    input_placeholder: ''
+    hits_empty: "不存在的<b style=color:red>${query}</b>"
+    hits_stats: "${hits}条记录"
 
 
 # Local search
