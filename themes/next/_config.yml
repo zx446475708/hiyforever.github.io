@@ -448,7 +448,7 @@ algolia_search:
     per_page: 10
   labels:
     input_placeholder: ''
-    hits_empty: "不存在的<b style=color:red>${query}</b>"
+    hits_empty: "不存在的<em class="highlight">${query}</em>"
     hits_stats: "共${hits}条记录"
 
 
