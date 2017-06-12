@@ -70,11 +70,10 @@ theme: next
 deploy:
   type:
 
-# Algolia
-algolia:
-  applicationID: 'UE83X7LW1Z'
-  apiKey: 'c6a3d717fb81d9efaa928409259b272e'
-  adminApiKey: 'b336a91b0afffeea6eb53dd49e6353ec'
-  indexName: 'miku.blog'
-  chunkSize: 5000
+ # Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
   
