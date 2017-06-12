@@ -41,7 +41,7 @@
             var str='<ul class=\"search-result-list\">';
             var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
             $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+            if (this.value.trim().length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
