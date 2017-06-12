@@ -113,6 +113,7 @@
       } else {
         proceedsearch();
       };
+      document.getElementById('local-search-input').focus();
     });
 
     $('.popup-btn-close').click(function(e){
