@@ -15,6 +15,7 @@
         .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
         .css('overflow', 'hidden');
       $('.popup').toggle();
+      $('#local-search-input').focus();
     }
     // search function;
     var searchFunc = function(path, search_id, content_id) {
@@ -113,7 +114,6 @@
       } else {
         proceedsearch();
       };
-      document.getElementById('local-search-input').focus();
     });
 
     $('.popup-btn-close').click(function(e){
