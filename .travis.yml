@@ -1,16 +1,20 @@
 language: node_js
 
 node_js:
- - 6.2.0
+  - 6.2.0
 
 branches:
   only:
-  - hexo
+    - hexo
+
+before_install:
+  - git config --global user.name 'miku'
+  - git config --global user.email miku@miku.tk
 
 install:
- - npm install hexo-cli -g
- - npm install
+  - npm install hexo-cli -g
+  - npm install
 
 script:
- - hexo clean
- - hexo g -d
+  - hexo clean
+  - hexo g -d
