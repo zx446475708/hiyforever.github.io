@@ -1,4 +1,4 @@
-_hcwp_texts = {
+﻿_hcwp_texts = {
 	"yesterday at": "昨天的 {{time}}",
 	"before yesterday": "两天前的 {{time}}",
 	"days": [
@@ -81,7 +81,7 @@ _hcwp_texts = {
 	"replies": "回复",
 	"Link was copied": "链接已复制",
 	"image": "图片",
-	"video": "影片",
+	"video": "视频",
 	"presentation": "介绍",
 	"Enter text": "输入内容",
 	"crossposting to": "发表到",
