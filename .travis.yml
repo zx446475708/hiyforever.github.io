@@ -21,3 +21,5 @@ deploy:
   github_token: $GITHUB_TOKEN
   target_branch: master
   local_dir: public
+  on:
+    branch: hexo
