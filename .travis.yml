@@ -17,7 +17,7 @@ install:
 
 script:
   - hexo clean
-  - hexo g -d
+  - hexo g
 
 deploy:
   provider: pages
