@@ -7,10 +7,6 @@ branches:
   only:
     - hexo
 
-before_install:
-  - git config --global user.name 'miku'
-  - git config --global user.email miku@miku.tk
-
 install:
   - npm install hexo-cli -g
   - npm install
@@ -24,5 +20,4 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   target_branch: master
-  on:
-    branch: hexo
+  local_dir: public
