@@ -58,7 +58,7 @@ _hcwp_texts = {
 	"authorization": "登录",
 	"anonymously": "匿名",
 	"Your nick": "昵称",
-	"Send": "发送",
+	"Send": "确定",
 	"Attach": "添加",
 	"Warning": "警告",
 	"Mark as spam": "标示为垃圾评论",
