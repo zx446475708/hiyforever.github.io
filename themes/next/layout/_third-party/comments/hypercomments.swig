@@ -12,7 +12,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: {{ theme.hypercomments_id }}, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		{% if page.comments %}
-		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", quote_disable: 1, texts: _hcwp_texts});
+		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", texts: _hcwp_texts});
 		{% endif %}
 
 		(function() {
