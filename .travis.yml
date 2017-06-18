@@ -10,7 +10,10 @@ install:
   - npm install hexo-cli -g
   - npm install
 
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
 
 script:
   - hexo g
