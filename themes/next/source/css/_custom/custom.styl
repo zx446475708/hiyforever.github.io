@@ -2,24 +2,43 @@
 .site-author-image {
     border: none;
 }
-.site-author-name, .hc__ht, .hc__footer, .hc__reply__photo, .hc__top__unlike, .hcc[el=allF], .hcc[el=youtubeF], .hc__menu__settings__popup[rel=Link] {
-    display: none!important;
+.site-author-name {
+    display: none;
 }
-tr.hcc {
-    background-color: inherit!important;
+.hcc {
+    table>tbody>tr:nth-of-type(odd) {
+        background-color: inherit;
+    }
+    .hc__menu__viewerbox {
+        margin-top: inherit;
+    }
+    .hc__top__right {
+        float: right;
+    }
+    .hc__top__left {
+        float: left;
+    }
+    .hc__reply__box {
+        margin-left: inherit;
+    }
+    .hc__menu__comment__popup {
+        height: inherit!important;
+
+        [el=allF], [el=youtubeF] {
+            display: none;
+        }
+    }
+    .hc__menu__settings__popup {
+        height: inherit!important;
+
+        [rel=Link] {
+            display: none;
+        }
+    }
+    .hc__footer, .hc__reply__photo, .hc__top__unlike {
+        display: none;
+    }
 }
-.hc__menu__viewerbox[active=true] {
-    margin-top: inherit!important;
-}
-.hc__reply__box {
-    margin-left: inherit!important;
-}
-.hc__top__right {
-    float: right!important;
-}
-.hc__top__left {
-    float: left!important;
-}
-.hc__menu__comment__popup, .hcc[el=SettingsBox] {
-    height: inherit!important;
+.hc__ht {
+    visibility: hidden;
 }
