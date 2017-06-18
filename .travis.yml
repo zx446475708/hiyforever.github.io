@@ -10,9 +10,6 @@ cache:
   directories:
     - node_modules
 
-# install:
-#   - npm install hexo-cli -g
-
 script:
   - hexo g
 
@@ -24,3 +21,4 @@ deploy:
   local_dir: public
   on:
     branch: hexo
+    
