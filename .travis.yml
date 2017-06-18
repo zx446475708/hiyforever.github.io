@@ -1,7 +1,5 @@
 language: node_js
 
-node_js: 6
-
 branches:
   only:
     - hexo
@@ -10,10 +8,6 @@ cache:
   yarn: true
   directories:
     - node_modules
-
-# install:
-#   - npm install hexo-cli -g
-#   - npm install
 
 script:
   - hexo g
