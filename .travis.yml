@@ -7,8 +7,11 @@ branches:
     - hexo
     
 notifications:
-  slack:
+  email:
+    recipients:
+      - hiyforever@126.com
     on_success: always
+    on_failure: always
 
 cache:
   directories:
