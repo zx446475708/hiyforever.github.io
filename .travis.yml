@@ -6,13 +6,6 @@ branches:
   only:
     - hexo
     
-notifications:
-  email:
-    recipients:
-      - hiyforever@126.com
-    on_success: always
-    on_failure: always
-
 cache:
   directories:
     - node_modules
