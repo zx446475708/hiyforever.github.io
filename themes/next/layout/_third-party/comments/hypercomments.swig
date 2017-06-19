@@ -12,7 +12,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: {{ theme.hypercomments_id }}, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		{% if page.comments %}
-		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", texts: _hcwp_texts, auth: "eyJpZCI6IjE0OTc4NDkzMTciLCJuaWNrIjoiVGVzdCBOaWNrIiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImF2YXRhciI6Imh0dHBzOlwvXC93d3cuaHlwZXJjb21tZW50cy5jb21cL3N0YXRpY1wvaW1nXC9oY2xvZ28ucG5nIiwicHJvZmlsZV91cmwiOiJodHRwczpcL1wvcHJvZmlsZS5oeXBlcmNvbW1lbnRzLmNvbSJ9_1497850587_eca1ce7d4dcc0951a0f74c1060ec1145"});
+		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", texts: _hcwp_texts});
 		{% endif %}
 
 		(function() {
