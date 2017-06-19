@@ -5,6 +5,10 @@ node_js: node
 branches:
   only:
     - hexo
+    
+notifications:
+  slack:
+    on_success: always
 
 cache:
   directories:
