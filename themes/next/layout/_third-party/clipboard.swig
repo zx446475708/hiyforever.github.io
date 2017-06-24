@@ -5,13 +5,13 @@ if (Clipboard.isSupported()) {
   _clipboard_figures = $("figure");
   _clipboard_figures = _clipboard_figures.add($("pre").not(_clipboard_figures.find("pre")));
   _clipboard_figures.wrap('<div class="content-code"></div>');
-  _clipboard_figures.before('<button class="clipboard_button"><i class="fa fa-clipboard"></i></button>');
+  _clipboard_figures.before('<button class="clipboard_button tooltipped tooltipped-s"><i class="fa fa-clipboard"></i></button>');
   _clipboard_buttons = _clipboard_figures.prev();
   _clipboard_buttons.mouseleave(function() {
     $(this).blur();
   });
   _clipboard_buttons.focus(function() {
-    $(this).removeClass("tooltipped tooltipped-s");
+    $(this).removeClass("tooltipped tooltipped-s"); a 
   });
   
   var _clipboard = new Clipboard('.clipboard_button', {
