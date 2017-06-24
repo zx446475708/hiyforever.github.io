@@ -11,13 +11,13 @@ if (Clipboard.isSupported()) {
     $(this).blur();
   });
   _clipboard_buttons.mouseenter(function() {
-    $(this).removeClass("tooltipped tooltipped-s"); a 
+    $(this).removeClass("tooltipped tooltipped-s");
   });
   
   var _clipboard = new Clipboard('.clipboard_button', {
     target: function(trigger) {
       var next = $(trigger).next();
-      return next.find(".code") a [0] || next.find("code")[0];
+      return next.find(".code")[0] || next.find("code")[0];
     }
   });
   _clipboard.on('success', function(e) {
