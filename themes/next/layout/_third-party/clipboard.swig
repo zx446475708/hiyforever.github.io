@@ -7,7 +7,9 @@ if (Clipboard.isSupported()) {
   _clipboard_figures.wrap('<div class="content-code"></div>');
   _clipboard_figures.before('<button class="clipboard_button tooltipped tooltipped-s"><i class="fa fa-clipboard"></i></button>');
   _clipboard_figures.prev().mouseleave(function() {
-    $(this).blur();
+    var e = $(this);
+    e.blur();
+    e.removeAttr("aria-label");
   });
   
   var _clipboard = new Clipboard('.clipboard_button', {
@@ -20,13 +22,15 @@ if (Clipboard.isSupported()) {
   });
   _clipboard.on('success', function(e) {
     e.clearSelection();
-    $(e.trigger).attr("aria-label", "已复制");
-    $(e.trigger).focus();
+    e = $(e.trigger);
+    e.attr("aria-label", "已复制");
+    e.focus();
   });
   _clipboard.on('error', function(e) {
     e.clearSelection();
-    $(e.trigger).attr("aria-label", "复制失败");
-    $(e.trigger).focus();
+    e = $(e.trigger);
+    e.attr("aria-label", "复制失败");
+    e.focus();
   });
 }
 </script>
