@@ -1,1 +1,3 @@
-hexo s --draft
+call hexo clean
+call hexo s
+start.bat
