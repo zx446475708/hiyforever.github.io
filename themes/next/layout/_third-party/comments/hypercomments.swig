@@ -12,7 +12,18 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: {{ theme.hypercomments_id }}, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		{% if page.comments %}
-		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", texts: _hcwp_texts});
+		_hcwp.push({widget:"Stream", widget_id: {{ theme.hypercomments_id }}, xid: "{{ page.path }}", texts: _hcwp_texts, callback: function(app) {
+			if (_clipboard_buttons_add) {
+				$(".hc__messages").bind('DOMNodeInserted', function(e) {
+					e = $(e.target);
+					if (e.hasClass("hc__message")){
+						_clipboard_buttons_add(e.find(".hc__message__txt pre"));
+					} else if (e.parent().hasClass("hc__message__txt")) {
+						_clipboard_buttons_add(e.filter("pre").add(e.find("pre")));
+					}
+				});
+			}
+		}});
 		{% endif %}
 
 		(function() {
