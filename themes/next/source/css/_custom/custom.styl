@@ -88,14 +88,14 @@
     pointer-events: none;
     border: 5px solid transparent;
 }
-.tooltipped:hover:before,.tooltipped:hover:after,.tooltipped:active:before,.tooltipped:active:after,.tooltipped:focus:before,.tooltipped:focus:after {
+.tooltipped:hover:before,.tooltipped:hover:after {
     display: inline-block;
     text-decoration: none;
 }
-.tooltipped:active:before,.tooltipped:focus:before {
+.tooltipped:hover:before {
     content: "";
 }
-.tooltipped:active:after,.tooltipped:focus:after {
+.tooltipped:hover:after {
     content: attr(aria-label);
 }
 .tooltipped-s:after {
