@@ -24,11 +24,11 @@ if (Clipboard.isSupported()) {
     e.blur();
   });
 
-  _clipboard_buttons_add = function(_clipboard_figures) {
-    _clipboard_figures.wrap('<div class="content-code"></div>');
-    _clipboard_figures.before('<button class="clipboard_button"><i class="fa fa-clipboard"></i></button>');
+  _clipboard_buttons_add = function(e) {
+    e.wrap('<div class="clipboard-code"></div>');
+    e.before('<button class="clipboard_button"><i class="fa fa-clipboard"></i></button>');
     
-    _clipboard_buttons = _clipboard_figures.prev();
+    _clipboard_buttons = e.prev();
     _clipboard_buttons_tip_class = "tooltipped tooltipped-s";
     _clipboard_buttons_tip_label = "aria-label";
     _clipboard_buttons_tip_remove = function() {
@@ -48,7 +48,6 @@ if (Clipboard.isSupported()) {
     _clipboard_buttons.on('touchstart', _clipboard_buttons_tip_remove);
   };
   _clipboard_figures = $("figure");
-  _clipboard_figures = _clipboard_figures.add($("pre").not(_clipboard_figures.find("pre")));
-  _clipboard_buttons_add(_clipboard_figures);
+  _clipboard_buttons_add(_clipboard_figures.add($("pre").not(_clipboard_figures.find("pre"))));
 }
 </script>
