@@ -27,7 +27,6 @@
         success: function( xmlResponse ) {
           // get the contents from search data
           isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
           var datas = $( "entry", xmlResponse ).map(function() {
             return {
               title: $( "title", this ).text(),
@@ -102,7 +101,6 @@
             if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
             $resultContent.innerHTML = str;
           });
-          proceedsearch();
         }
       });}
 
@@ -111,9 +109,8 @@
       e.stopPropagation();
       if (isfetched == false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
+      }
+      proceedsearch();
     });
 
     $('.popup-btn-close').click(function(e){
