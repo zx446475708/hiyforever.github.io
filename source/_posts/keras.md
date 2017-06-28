@@ -19,7 +19,7 @@ tags:
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, roc_curve, recall_score, f1_score
 ```
 
 ## 导入你的数据
@@ -41,7 +41,6 @@ model = Sequential()
 1. 模型的网络层设定
 ``` python
 model.add(Dense(128, input_dim=3, activation='tanh'))
-model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 ```
 
