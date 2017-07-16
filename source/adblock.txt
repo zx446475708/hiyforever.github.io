@@ -3,4 +3,4 @@
 ! Others: 
 
 m.dmzj.com##.timeAD
-m.dmzj.com###mask
+m.dmzj.com###mark
