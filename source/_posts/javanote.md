@@ -14,11 +14,13 @@ Java 中一些常被忽略的地方。
 ```java
 System.out.println(123456789f); 
 System.out.println(12345678909876543d);
+System.out.println(true ? 123456789 : 1f);
 ```
-输出
+    输出
 ```console
 1.23456792E8
 1.2345678909876544E16
+1.23456792E8
 ```
 
 1. 计算 double/float 的 BigDecimal 应使用 doubleValue/floatValue 方法取实际值进行比较
@@ -30,7 +32,7 @@ BigDecimal b = new BigDecimal(2.2);
 System.out.println(a.equals(b));
 System.out.println(a.doubleValue() == b.doubleValue());
 ```
-输出：
+    输出
 ```console
 false
 true
