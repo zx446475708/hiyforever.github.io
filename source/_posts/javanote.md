@@ -29,8 +29,8 @@ Java 中一些常被忽略的地方。
     ```
     输出
     ```console
-    true
-    ```
+    true
+    ```
 
 1. 计算 double/float 的 BigDecimal 应使用 doubleValue/floatValue 方法取实际值进行比较
     ```java
