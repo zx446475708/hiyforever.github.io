@@ -23,6 +23,15 @@ Java 中一些常被忽略的地方。
     1.23456792E8
     ```
 
+1. float 与 double 之间因精度问题，不能比较
+    ```java
+    System.out.println(3.3 > 3.3f);
+    ```
+    输出
+    ```console
+    true
+    ```
+
 1. 计算 double/float 的 BigDecimal 应使用 doubleValue/floatValue 方法取实际值进行比较
     ```java
     BigDecimal a = new BigDecimal(1.1).multiply(new BigDecimal(2));
