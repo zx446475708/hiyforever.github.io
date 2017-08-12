@@ -4,3 +4,6 @@
 
 m.dmzj.com##.timeAD
 m.dmzj.com###mark
+
+tieba.baidu.com##.u9_recommend_news_wrapper
+tieba.baidu.com##.iSlider-wrapper-container-hot-thread
