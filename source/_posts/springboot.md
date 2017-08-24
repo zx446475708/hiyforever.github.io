@@ -57,7 +57,7 @@ root
          └─ApplicationTests.java
 ```
 
-## Gradle安装
+## Gradle
 Spring Boot的build.gradle文件包含以下内容
 ``` gradle
 plugins {
