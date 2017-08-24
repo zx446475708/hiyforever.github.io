@@ -18,7 +18,7 @@ Spring Boot从入门到入坑
 
 ## 项目结构
 完整的Spring Boot项目一般拥有以下目录结构
-``` less
+```
 root
 ├─build.gradle
 └─src
