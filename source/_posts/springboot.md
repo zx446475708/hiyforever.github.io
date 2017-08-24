@@ -17,7 +17,7 @@ Spring Boot从入门到入坑
 <!-- more -->
 
 ## 项目结构
-完整的Spring Boot项目一般拥有以下目录结构
+完整的Spring Boot项目一般拥有以下目录结构，当项目够大时推荐先按功能模块化各部分功能，再在各模块中采用此目录结构
 ```
 root
 ├─build.gradle
@@ -25,25 +25,26 @@ root
    ├─main
    │  ├─java/com/spring/boot
    │  │  ├─Application.java
-   │  │  ├─controller
-   │  │  │  └─GreetingController.java
-   │  │  ├─repository
-   │  │  │  ├─GreetingRepository.java
-   │  │  │  └─impl
-   │  │  │     └─GreetingRepositoryImpl.java
+   │  │  ├─web
+   │  │  │  ├─controller
+   │  │  │  │  └─GreetingController.java
+   │  │  │  └─json
+   │  │  │     └─GreetingJson.java
    │  │  ├─service
    │  │  │  ├─GreetingService.java
    │  │  │  └─impl
-   │  │  │     ├─GreetingServiceImpl.java
-   │  │  │     └─ExceptionHandlerServiceImpl.java
-   │  │  ├─entity
-   │  │  │  └─Greeting.java
-   │  │  ├─json
-   │  │  │  └─GreetingJson.java
+   │  │  │     └─GreetingServiceImpl.java
+   │  │  ├─domain
+   │  │  │  ├─repository
+   │  │  │  │  ├─GreetingRepository.java
+   │  │  │  │  └─impl
+   │  │  │  │     └─GreetingRepositoryImpl.java
+   │  │  │  └─entity
+   │  │  │     └─Greeting.java
    │  │  ├─enums
-   │  │  │  └─GreetingEnum.java
+   │  │  │  └─GreetingType.java
    │  │  ├─exception
-   │  │  │  └─GreetingException.java
+   │  │  │  └─BusinessException.java
    │  │  ├─config
    │  │  │  ├─InitializingBeanConfig.java
    │  │  │  ├─SchedulingConfig.java
