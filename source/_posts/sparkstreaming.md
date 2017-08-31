@@ -95,11 +95,11 @@ try {
 ```
 
 ## Spark Streaming性能指标及配置
-* 关键性能指标
+1. 关键性能指标
     * Scheduling Delay: Kafka队列数据读取时间，若太高需增大batch interval
     * Processing Time: 数据处理时间，若太高请优化代码，或增加资源分配
 
-* 配置参数
+1. 配置参数
     * spark.default.parallelism: 并行度，取决于任务数量，也就是一共需要多少线程来执行这些任务，一般为所有机器CPU总数的2\~3倍，即每个CPU开2\~3个线程，以充分利用CPU资源
     * spark.sql.shuffle.partitions: 分区数，取决于kafka队列的分区数，若每个分区数据量不大，可适当减少这个值
     * spark.streaming.concurrentJobs: 并行作业数量
