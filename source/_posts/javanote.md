@@ -56,6 +56,8 @@ Java 中一些常被忽略的地方。
     true
     ```
 
+1. 奇偶判别使用 (i & 1) == 0
+
 1. Calendar 和 DateFormat 皆非线程安全类
 
 1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日
