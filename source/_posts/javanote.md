@@ -33,7 +33,7 @@ Java 中一些常被忽略的地方。
     ```
 
 1. 计算 BigDecimal 应使用字符串进行初始化构造
-    ```java
+    ```java
     BigDecimal a = new BigDecimal(2.1).subtract(new BigDecimal(1.2));
     BigDecimal b = new BigDecimal(0.9);
     System.out.println(a.equals(b));
