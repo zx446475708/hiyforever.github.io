@@ -32,7 +32,7 @@ Java 中一些常被忽略的地方。
     true
     ```
 
-1. 计算 BigDecimal 应使用字符串进行初始化构造
+1. 计算 BigDecimal 应使用字符串进行初始化构造，使用compareTo进行比较
     ```java
     BigDecimal a = new BigDecimal(2.1).subtract(new BigDecimal(1.2));
     BigDecimal b = new BigDecimal(0.9);
@@ -40,7 +40,7 @@ Java 中一些常被忽略的地方。
     System.out.println(a.compareTo(b));
     System.out.println(a.doubleValue() == b.doubleValue());
 
-    BigDecimal c = new BigDecimal("2.1").subtract(new BigDecimal("1.2"));
+    BigDecimal c = new BigDecimal("2.1").subtract(new BigDecimal("1.20"));
     BigDecimal d = new BigDecimal("0.9");
     System.out.println(c.equals(d));
     System.out.println(c.compareTo(d));
@@ -51,7 +51,7 @@ Java 中一些常被忽略的地方。
     false
     1
     false
-    true
+    false
     0
     true
     ```
