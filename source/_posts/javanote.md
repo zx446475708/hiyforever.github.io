@@ -58,7 +58,7 @@ Java 中一些常被忽略的地方。
 
 1. Calendar 和 DateFormat 皆非线程安全类
 
-1. Date 和 Calendar 的月份从0开始，表示一月；星期从1开始，表示周日
+1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日
 
 1. equals 重写规则
     ```java
