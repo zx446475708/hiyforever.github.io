@@ -32,17 +32,27 @@ Java 中一些常被忽略的地方。
     true
     ```
 
-1. 计算 double/float 的 BigDecimal 应使用 doubleValue/floatValue 方法取实际值进行比较
-    ```java
-    BigDecimal a = new BigDecimal(1.1).multiply(new BigDecimal(2));
-    BigDecimal b = new BigDecimal(2.2);
-
+1. 计算 BigDecimal 应使用字符串进行初始化构造
+    ```java
+    BigDecimal a = new BigDecimal(2.1).subtract(new BigDecimal(1.2));
+    BigDecimal b = new BigDecimal(0.9);
     System.out.println(a.equals(b));
+    System.out.println(a.compareTo(b));
     System.out.println(a.doubleValue() == b.doubleValue());
+
+    BigDecimal c = new BigDecimal("2.1").subtract(new BigDecimal("1.2"));
+    BigDecimal d = new BigDecimal("0.9");
+    System.out.println(c.equals(d));
+    System.out.println(c.compareTo(d));
+    System.out.println(c.doubleValue() == d.doubleValue());
     ```
     输出
     ```console
     false
+    1
+    false
+    true
+    0
     true
     ```
 
