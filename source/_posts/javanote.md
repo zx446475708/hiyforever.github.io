@@ -32,7 +32,7 @@ Java 中一些常被忽略的地方。
     true
     ```
 
-1. 计算 BigDecimal 应使用字符串进行初始化构造，使用compareTo进行比较
+1. 计算 BigDecimal 应使用字符串进行初始化构造，使用 compareTo 进行比较
     ```java
     BigDecimal a = new BigDecimal(2.1).subtract(new BigDecimal(1.2));
     BigDecimal b = new BigDecimal(0.9);
@@ -56,9 +56,9 @@ Java 中一些常被忽略的地方。
     true
     ```
 
-1. Calendar和DateFormat皆非线程安全类
+1. Calendar 和 DateFormat 皆非线程安全类
 
-1. Date和Calendar的月份从0开始，表示一月；星期从1开始，表示周日
+1. Date 和 Calendar 的月份从0开始，表示一月；星期从1开始，表示周日
 
 1. equals 重写规则
     ```java
