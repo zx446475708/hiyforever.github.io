@@ -60,7 +60,7 @@ Java 中一些常被忽略的地方。
 
 1. Random 从 Jdk 1.7 开始为线程安全类，ThreadLocalRandom 效率更高，SecureRandom 更随机
 
-1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；DateFormat 无法识别毫秒格式
+1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；DateFormat 无法识别毫秒格式，使用 SimpleDateFormat 指定具体格式识别
 
 1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日；Date 无时区，new Date(0) 为标准零时，即北京时间 8 点， Calendar 默认当地时区，Calendar.getInstance().clear() 为当地时间零时
 
