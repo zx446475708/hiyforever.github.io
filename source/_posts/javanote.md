@@ -58,9 +58,9 @@ Java 中一些常被忽略的地方。
 
 1. 奇偶判别使用 (i & 1) == 0
 
-1. Random 非线程安全类，ThreadLocalRandom 线程安全类
+1. Random 非线程安全类（原因：seed），ThreadLocalRandom 线程安全类
 
-1. DateFormat 非线程安全类，多线程访问应用 ThreadLocal 创建；无法识别毫秒格式
+1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；无法识别毫秒格式
 
 1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日
 
