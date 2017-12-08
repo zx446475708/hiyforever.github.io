@@ -60,9 +60,9 @@ Java 中一些常被忽略的地方。
 
 1. Random 非线程安全类（原因：seed），ThreadLocalRandom 线程安全类
 
-1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；无法识别毫秒格式
+1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；DateFormat 无法识别毫秒格式
 
-1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日
+1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日；Date 无时区，new Date(0) 为标准零时，即北京时间 8 点， Calendar 默认当地时区，Calendar.getInstance().clear() 为当地时间零时
 
 1. equals 重写规则
     ```java
