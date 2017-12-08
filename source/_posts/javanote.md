@@ -58,7 +58,7 @@ Java 中一些常被忽略的地方。
 
 1. 奇偶判别使用 (i & 1) == 0；判断 2 指数 (i & (i - 1)) == 0
 
-1. Random 非线程安全类（原因：seed），ThreadLocalRandom 线程安全类
+1. Random 非线程安全类（原因：seed），ThreadLocalRandom 线程安全类，或用 math.random（内部类封装了一个 Random 对象，无法修改 seed）
 
 1. DateFormat 非线程安全类（原因：calendar），多线程访问应用 ThreadLocal 创建；DateFormat 无法识别毫秒格式
 
