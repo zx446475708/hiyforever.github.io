@@ -87,8 +87,8 @@ Java 中一些常被忽略的地方。
     new FileInputStream("fileName");  // 无缓冲字节输入流
     new BufferedInputStream(new FileInputStream("fileName"));  // 缓冲字节输入流
 
-    new PrintStream("fileName");  // 无缓冲字节输出流（内部 FileOutputStream）
-    new PrintStream(new BufferedOutputStream(new FileOutputStream("fileName")));  // 缓冲字节输出流
+    new PrintStream("fileName");  // 无缓冲字节输出流（内部 FileOutputStream，需要注意部分方法并非字节输出流，或直接用 FileOutputStream）
+    new PrintStream(new BufferedOutputStream(new FileOutputStream("fileName")));  // 缓冲字节输出流（需要注意部分方法并非字节输出流，或直接用 BufferedOutputStream）
 
     new Scanner(new File("fileName"));  // 无缓冲字符输入流（内部 new FileInputStream(file).getChannel()）
     new Scanner(new BufferedReader(new FileReader("")));  // 缓冲字符输入流
