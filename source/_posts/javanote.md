@@ -92,6 +92,6 @@ Java 中一些常被忽略的地方。
 
     new Scanner(new File("fileName"));  // 无缓冲字符输入流（内部 new FileInputStream(file).getChannel()）
     new Scanner(new BufferedReader(new FileReader("")));  // 缓冲字符输入流
-
-    new PrintWriter("fileName");  // 缓冲字符输出流（内部 BufferedWriter；Writer 类都实现字符串缓冲输出了，无缓冲的自己用无缓冲字节输出流写一个包进 PrintWriter 里吧，或者用 autoFlush 写到缓冲区后直接写回硬盘）
+    
+    new PrintWriter("fileName");  // 缓冲字符输出流（内部 BufferedWriter；Writer 类都实现字符串缓冲输出了，无缓冲的自己用无缓冲字节输出流写一个包进 PrintWriter 里吧，或者用 autoFlush 写到缓冲区后直接写回硬盘）
     ```
