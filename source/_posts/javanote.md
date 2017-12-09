@@ -93,5 +93,5 @@ Java 中一些常被忽略的地方。
     new Scanner(new File("fileName"));  // 无缓冲字符输入流（内部 new FileInputStream(file).getChannel()）
     new Scanner(new BufferedReader(new FileReader("")));  // 缓冲字符输入流
 
-    new PrintWriter("fileName");  // 缓冲字符输出流（Writer 类都实现字符串缓冲输出了，无缓冲的自己写吧）
+    new PrintWriter("fileName");  // 缓冲字符输出流（内部 BufferedWriter，Writer 类都实现字符串缓冲输出了，无缓冲的自己写吧）
     ```
