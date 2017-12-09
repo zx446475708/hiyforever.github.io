@@ -29,3 +29,20 @@ Go 中一些常被忽略的地方。
     [1 3] [1 4 5]
     ```
 
+1. 值方法可通过指针和值调用， 而指针方法只能通过指针来调用；值方法针对对象副本，每次调用都会先进行内存复制
+    ```go
+    type Int int
+
+    func (i *Int) String() string {
+        return "My String()"
+    }
+
+    func main() {
+        var i Int
+        fmt.Println(i, &i)
+    }
+    ```
+    输出
+    ```console
+    0 My String()
+    ```
