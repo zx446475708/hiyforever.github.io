@@ -104,7 +104,7 @@ Go 中一些常被忽略的地方。
     ```go
     for {
         select {
-        case <-c1:
+        case <-c1:
         default:
         }
 	
