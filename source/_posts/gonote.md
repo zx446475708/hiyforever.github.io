@@ -77,9 +77,9 @@ Go 中一些常被忽略的地方。
     c <- 1
     close(c)
     i, ok := <-c
-    fmt.Println(i, ok)
+    println(i, ok)
     i, ok = <-c
-    fmt.Println(i, ok)
+    println(i, ok)
     ```
     输出
     ```console
