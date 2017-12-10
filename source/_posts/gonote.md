@@ -46,3 +46,26 @@ Go 中一些常被忽略的地方。
     ```console
     0 My String()
     ```
+
+1. 接口类型并不能屏蔽非接口方法
+    ```go
+    type Int int
+
+    func (i *Int) String() string {
+        return "My String()"
+    }
+
+    func (i *Int) Error() string {
+        return "My Error()"
+    }
+
+    func main() {
+	    var i Int
+        var s fmt.Stringer = &i
+        fmt.Println(&i, s)
+    }
+    ```
+    输出
+    ```console
+    My Error() My Error()
+    ```
