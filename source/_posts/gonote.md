@@ -73,15 +73,13 @@ Go 中一些常被忽略的地方。
 
 1. 关闭的 channel 在缓冲区没有清空时，仍能正常取数据，第二参数返回 true
     ```go
-    func main() {
-        c := make(chan int)
-        c <- 1
-        close(c)
-        i, ok := <-c
-        fmt.Println(i, ok)
-        i, ok = <-c
-        fmt.Println(i, ok)
-    }
+    c := make(chan int)
+    c <- 1
+    close(c)
+    i, ok := <-c
+    fmt.Println(i, ok)
+    i, ok = <-c
+    fmt.Println(i, ok)
     ```
     输出
     ```console
