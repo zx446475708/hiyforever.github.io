@@ -86,3 +86,17 @@ Go 中一些常被忽略的地方。
     1 true
     0 false
     ```
+1. select default 嵌套提高 channel 优先级
+    ```go
+    for {
+        select {
+        case <-highChannel:
+        default:
+	    select {
+	        case <-lowChannel:
+	        default:
+	    }
+	}
+    }
+    ```
+    
