@@ -69,3 +69,22 @@ Go 中一些常被忽略的地方。
     ```console
     My Error() My Error()
     ```
+1. 向满 channel 发数据和从空 channel 取数据，只有在没有 goroutine 运行时会报错，有其它 goroutine 运行时才会阻塞
+
+1. 关闭的 channel 在缓冲区没有清空时，仍能正常取数据，第二参数返回 true
+    ```go
+    func main() {
+        c := make(chan int)
+        c <- 1
+        close(c)
+        i, ok := <-c
+        fmt.Println(i, ok)
+        i, ok = <-c
+        fmt.Println(i, ok)
+    }
+    ```
+    输出
+    ```console
+    1 true
+    0 false
+    ```
