@@ -99,4 +99,18 @@ Go 中一些常被忽略的地方。
         }
     }
     ```
-    
+
+1. select default 分离保证 channel 最少调度
+    ```go
+    for {
+        select {
+        case <-c1:
+        default:
+        }
+	
+        select {
+        case <-c2:
+        default:
+        }
+    }
+    ```
