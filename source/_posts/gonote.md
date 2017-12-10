@@ -96,7 +96,7 @@ Go 中一些常被忽略的地方。
                 case <-lowChannel:
                 default:
             }
-	}
+        }
     }
     ```
     
