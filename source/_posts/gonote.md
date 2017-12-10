@@ -92,10 +92,10 @@ Go 中一些常被忽略的地方。
         select {
         case <-highChannel:
         default:
-	    select {
-	        case <-lowChannel:
-	        default:
-	    }
+            select {
+                case <-lowChannel:
+                default:
+            }
 	}
     }
     ```
