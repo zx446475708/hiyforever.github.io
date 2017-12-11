@@ -94,3 +94,4 @@ Java 中一些常被忽略的地方。
     
     new PrintWriter("fileName");  // 缓冲字符输出流（内部 BufferedWriter）
     ```
+1. Stack extends Vector，用 Deque 吧
