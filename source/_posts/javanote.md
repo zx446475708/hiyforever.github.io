@@ -96,11 +96,11 @@ Java 中一些常被忽略的地方。
     ```
 1. Stack extends Vector，用 Deque 吧
 
-1. 复合赋值符号向下赋值时隐含自动转型，编译器不会报错，但不利于阅读
+1. 复合赋值隐含自动转型，编译器不会报错，但不利于阅读
     ```java
     byte b = 0;
-    int i = 128;
-    b += i;  // 相当于 b = (byte) (b + i);
+    short i = 128;
+    b += i;  // 相当于 b = (byte) (b + i); 注意 b + i 会先提升 int 类型
     System.out.println(b);
     ```
     输出
