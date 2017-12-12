@@ -119,7 +119,7 @@ Go 中一些常被忽略的地方。
 
 1. make(chan type) 默认容量为 0，即同步 channel
 
-1. 关闭所有接收端
+1. 快速关闭所有接收端，跳过已缓冲数据
     ```go
         ch := make(chan int, 3)
         running := make(chan bool)
