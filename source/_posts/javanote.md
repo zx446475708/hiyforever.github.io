@@ -100,7 +100,7 @@ Java 中一些常被忽略的地方。
     ```java
     byte b = 0;
     short i = 128;
-    b += i;  // 相当于 b = (byte) (b + i); 注意 b + i 会先提升 int 类型
+    b += i;  // 相当于 b = (byte) (b + i); 注意 b + i 会先提升 int 类型
     System.out.println(b);
     ```
     输出
