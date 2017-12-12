@@ -133,9 +133,9 @@ Go 中一些常被忽略的地方。
         for {
             select {
             case i, running := <-ch:
-	        if !running {
-		    break LOOP
-		}
+                if !running {
+                        break LOOP
+                }
                 print(i)
             }
         }
