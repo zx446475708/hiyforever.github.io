@@ -112,10 +112,10 @@ Java 中一些常被忽略的地方。
 
 1. -1 << 32 == -1，左移操作的移位数会自动取余，int 的 % 32，long 的 % 64
     ```java
-    System.out.println(-1 << 32 == -1);
+    System.out.println(-1 << 32);
     ```
     输出
     ```console
-    true
+    -1
     ```
     
