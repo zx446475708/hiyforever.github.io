@@ -119,7 +119,33 @@ Go 中一些常被忽略的地方。
 
 1. make(chan type) 默认容量为 0，即同步 channel
 
-1. 快速关闭所有接收端，跳过已缓冲数据
+1. 关闭所有接收端，不跳过已缓冲数据（一对多）
+    ```go
+        ch := make(chan int, 3)
+        go func(ch chan int) {
+            for i := 0; i < 10; i++ {
+                ch <- i
+            }
+            close(ch)
+        }(ch)
+
+    LOOP:
+        for {
+            select {
+            case i, running := <-ch:
+	        if !running {
+		    break LOOP
+		}
+                print(i)
+            }
+        }
+    ```
+    输出
+    ```console
+    0123456789
+    ```
+
+1. 快速关闭所有接收端，跳过已缓冲数据（一对多）
     ```go
         ch := make(chan int, 3)
         running := make(chan bool)
@@ -147,4 +173,35 @@ Go 中一些常被忽略的地方。
     输出
     ```console
     0123456
+    ```
+
+1. 关闭所有发送端（多对一）
+    ```go
+        ch := make(chan int, 3)
+        running := make(chan bool)
+        go func(ch chan int, running chan bool) {
+            for i := 0; i < 10; i++ {
+                <-ch
+            }
+            close(running)
+        }(ch, running)
+
+    LOOP:
+        for i := 0; ; {
+            select {
+            case <-running:
+                break LOOP
+            default:
+            }
+            select {
+            case ch <- i:
+                print(i)
+                i++
+            default:
+            }
+        }
+    ```
+    输出
+    ```console
+    0123456789
     ```
