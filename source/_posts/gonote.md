@@ -126,7 +126,7 @@ Go 中一些常被忽略的地方。
             for i := 0; i < 10; i++ {
                 ch <- i
             }
-	    close(ch)
+            close(ch)
         }(ch)
 
     LOOP:
