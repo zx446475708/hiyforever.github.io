@@ -1,5 +1,5 @@
 ! Version: 1.0
-! Title: 规则源
+! Title: miku
 ! Others: 
 
 m.dmzj.com##.timeAD
