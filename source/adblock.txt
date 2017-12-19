@@ -5,11 +5,9 @@
 m.dmzj.com##.timeAD
 m.dmzj.com###mark
 m.dmzj.com###app_home_ad
-m.dmzj.com###khdDown
 
 tieba.baidu.com##.u9_recommend_news_wrapper
 tieba.baidu.com##.iSlider-wrapper-container-hot-thread
 tieba.baidu.com##.dia_mask
 tieba.baidu.com##.dia_wrapper
 tieba.baidu.com##.hongbao_page_pop_common
-tieba.baidu.com##.appPromote
