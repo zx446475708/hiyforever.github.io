@@ -121,7 +121,23 @@ Java 中一些常被忽略的地方。
     0
     ```
     
-1. 不同接口同一方法抛出的异常取交集
+1. 实现不同接口同一方法抛出的异常取交集的子集
+    ```java
+    interface interface1 {
+        void throwsException() throws FileNotFoundException, IOException;
+    }
+
+    interface interface2 {
+        void throwsException() throws IOException, ClassNotFoundException;
+    }
+
+    class Class implements interface1, interface2 {
+
+        @Override
+        public void throwsException() throws ClosedChannelException {
+        }
+    }
+    ```
 
 1. 成员变量与动态代码块中的异常在构造函数中抛出
     ```java
