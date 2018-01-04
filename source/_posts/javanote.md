@@ -125,16 +125,15 @@ Java 中一些常被忽略的地方。
 
 1. 成员变量与动态代码块中的异常在构造函数中抛出
     ```java
-	boolean bool = throwsException();
-	{
-		throwsException();
-	}
+    boolean bool = throwsException();
+    {
+        throwsException();
+    }
 
-	public Class() throws Exception {
-	}
+    public Class() throws Exception {
+    }
 
-	public static boolean throwsException() throws Exception {
-		throw new Exception();
-	}
+    public static boolean throwsException() throws Exception {
+        throw new Exception();
+    }
     ```
-    
