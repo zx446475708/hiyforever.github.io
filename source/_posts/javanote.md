@@ -139,7 +139,7 @@ Java 中一些常被忽略的地方。
     }
     ```
 
-1. 成员变量与动态代码块中的异常在构造函数中抛出
+1. try-with-resources
     ```java
     boolean bool = throwsException();
     {
@@ -157,7 +157,7 @@ Java 中一些常被忽略的地方。
 1. 成员变量与动态代码块中的异常在构造函数中抛出
     ```java
     public static void main() {
-        // since java7
+        // since java7
         try (InputStream inputStream = new FileInputStream("fileName");
             OutputStream outputStream = new FileOutputStream("fileName")) {
         } catch (FileNotFoundException e) {
@@ -165,7 +165,7 @@ Java 中一些常被忽略的地方。
         } catch (IOException e) { // throw by close method
         }
 
-        // before java7
+        // before java7
         InputStream inputStream = null;
         OutputStream outputStream = null;
         try {
@@ -174,7 +174,7 @@ Java 中一些常被忽略的地方。
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally { // try to close by Closeable
-            close(inputStream, outputStream);
+            close(inputStream, outputStream);
         }
     }
     
