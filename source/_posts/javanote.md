@@ -1,7 +1,7 @@
 ---
 title: Java 日常笔记
 date: 2017-07-15 18:47:33
-updated: 2017-07-15 18:47:33
+updated: 2018-01-06 22:50:46
 categories:
     - java
 tags:
@@ -151,5 +151,40 @@ Java 中一些常被忽略的地方。
 
     public static boolean throwsException() throws Exception {
         throw new Exception();
+    }
+    ```
+
+1. 成员变量与动态代码块中的异常在构造函数中抛出
+    ```java
+    public static void main() {
+        // since java7
+        try (InputStream inputStream = new FileInputStream("fileName");
+            OutputStream outputStream = new FileOutputStream("fileName")) {
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) { // throw by close method
+        }
+
+        // before java7
+        InputStream inputStream = null;
+        OutputStream outputStream = null;
+        try {
+            inputStream = new FileInputStream("fileName");
+            outputStream = new FileOutputStream("fileName");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally { // try to close by Closeable
+            close(inputStream);
+            close(outputStream);
+        }
+    }
+
+    private static void close(Closeable closeable) {
+        if (closeable != null) {
+            try {
+                closeable.close();
+            } catch (IOException e) {
+            }
+        }
     }
     ```
