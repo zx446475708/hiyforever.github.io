@@ -139,7 +139,7 @@ Java 中一些常被忽略的地方。
     }
     ```
 
-1. try-with-resources
+1. 成员变量与动态代码块中的异常在构造函数中抛出
     ```java
     boolean bool = throwsException();
     {
@@ -154,7 +154,7 @@ Java 中一些常被忽略的地方。
     }
     ```
 
-1. 成员变量与动态代码块中的异常在构造函数中抛出
+1. try-with-resources
     ```java
     public static void main() {
         // since java7
