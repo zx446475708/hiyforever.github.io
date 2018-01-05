@@ -174,16 +174,22 @@ Java 中一些常被忽略的地方。
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally { // try to close by Closeable
-            close(inputStream);
-            close(outputStream);
+            close(inputStream, outputStream);
         }
     }
-
-    private static void close(Closeable closeable) {
-        if (closeable != null) {
-            try {
-                closeable.close();
-            } catch (IOException e) {
+    
+    /**
+     * Try to close resources which implements {@link Closeable}
+     * 
+     * @param closeables methods which implements {@link Closeable}
+     */
+    private static void close(Closeable... closeables) {
+        for (Closeable closeable : closeables) {
+            if (closeable != null) {
+                try {
+                    closeable.close();
+                } catch (Exception e) {
+                }
             }
         }
     }
