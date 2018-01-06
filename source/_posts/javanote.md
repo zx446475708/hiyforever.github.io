@@ -216,7 +216,7 @@ Java 中一些常被忽略的地方。
 
 1. 类变量初始化->类变量从上到下依次赋值
     ```java
-    public class Class {
+    public class Class {
         private static Class clazz = new Class();
         private static int num = 1;
 
