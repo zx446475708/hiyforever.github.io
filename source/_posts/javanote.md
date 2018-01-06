@@ -231,7 +231,7 @@ Java 中一些常被忽略的地方。
     ```
 
 1. 重写类的调用
-    ```java
+    ```java
     public class A {
         public int override() {
             return 1;
