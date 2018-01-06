@@ -230,8 +230,8 @@ Java 中一些常被忽略的地方。
     0
     ```
 
-1. 类变量初始化->类变量从上到下依次赋值
-    ```java
+1. 重写类的调用
+    ```java
     public class A {
         public int override() {
             return 1;
