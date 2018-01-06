@@ -194,3 +194,22 @@ Java 中一些常被忽略的地方。
         }
     }
     ```
+
+1. 重载参数就近
+    ```java
+    public static void main() {
+        func(null); // call func(B b)
+    }
+
+    class A {
+    }
+
+    class B extends A {
+    }
+
+    public static void func(A a) {
+    }
+
+    public static void func(B b) {
+    }
+    ```
