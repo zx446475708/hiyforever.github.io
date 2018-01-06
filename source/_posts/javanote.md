@@ -156,7 +156,7 @@ Java 中一些常被忽略的地方。
 
 1. try-with-resources
     ```java
-    public static void main() {
+    public static void main(String[] args) {
         // since java7
         try (InputStream inputStream = new FileInputStream("fileName");
             OutputStream outputStream = new FileOutputStream("fileName")) {
@@ -197,7 +197,7 @@ Java 中一些常被忽略的地方。
 
 1. 重载参数就近
     ```java
-    public static void main() {
+    public static void main(String[] args) {
         func(null); // call func(B b)
     }
 
