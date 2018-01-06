@@ -229,3 +229,31 @@ Java 中一些常被忽略的地方。
     ```console
     0
     ```
+
+1. 类变量初始化->类变量从上到下依次赋值
+    ```java
+    public class A {
+        public int override() {
+            return 1;
+        }
+
+        public void callOverride() {
+            System.out.println(override());
+        }
+
+        public static void main(String[] args) {
+            new B().callOverride();
+        }
+    }
+
+    class B extends A {
+        @Override
+        public int override() {
+            return 2;
+        }
+    }
+    ```
+    输出
+    ```console
+    2
+    ```
