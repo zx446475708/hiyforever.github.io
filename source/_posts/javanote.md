@@ -56,6 +56,8 @@ Java 中一些常被忽略的地方。
     true
     ```
 
+1. Math.abs(Integer.MIN_VALUE) < 0
+
 1. 奇偶判别使用 (i & 1) == 0；判断 2 指数 (i & (i - 1)) == 0
 
 1. Random 从 Jdk 1.7 开始为线程安全类，ThreadLocalRandom 效率更高，SecureRandom 更随机
