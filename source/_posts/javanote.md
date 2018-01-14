@@ -282,5 +282,5 @@ Java 中一些常被忽略的地方。
 
 1. 动态内部类的构造器具有一个隐藏参数，反射构建时需指明
     ```java
-    Inner.class.getConstructor(Outer.class).newInstance(new Outer());
+    Inner.class.getConstructor(Outer.class).newInstance(new Outer());
     ```
