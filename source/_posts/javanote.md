@@ -263,3 +263,19 @@ Java 中一些常被忽略的地方。
     ```console
     2
     ```
+
+1. 被遮蔽的方法不会重载
+    ```java
+    void wake() {
+    }
+
+    void sleep() {
+    }
+
+    class Class {
+        void sleep(int time) {
+            wake();  // correct
+            sleep();  // error
+        }
+    };
+    ```
