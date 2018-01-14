@@ -86,6 +86,7 @@ Java 中一些常被忽略的地方。
         return ...;
     }
     ```
+
 1. 文件读写
     ```java
     new FileInputStream("fileName");  // 无缓冲字节输入流
@@ -98,6 +99,7 @@ Java 中一些常被忽略的地方。
     
     new PrintWriter("fileName");  // 缓冲字符输出流（内部 BufferedWriter）
     ```
+
 1. Stack extends Vector，用 Deque 吧
 
 1. 复合赋值隐含自动转型，编译器不会报错，但不利于阅读
@@ -111,7 +113,7 @@ Java 中一些常被忽略的地方。
     ```console
     -128
     ```
-    
+
 1. byte[] 转 String 需指定字符集，因为默认字符集根据平台而定，是不确定的
 
 1. 移位操作的移位数会自动取余，int 的 % 32，long 的 % 64
