@@ -286,3 +286,10 @@ Java 中一些常被忽略的地方。
     ```java
     Inner.class.getConstructor(Outer.class).newInstance(new Outer());
     ```
+
+1. Process 的输入流和错误流有缓冲区大小限制（由平台决定，本机测试为4120个字符），任一缓冲区满则进程阻塞，故需及时读取返回内容，若无需返回结果，则直接关闭相应流
+    ```java
+    Process p = Runtime.getRuntime().exec("command");
+    p.getInputStream().close();
+    p.getErrorStream().close();
+    ```
