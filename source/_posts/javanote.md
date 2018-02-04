@@ -295,3 +295,12 @@ Java 中一些常被忽略的地方。
     p.getInputStream().close();
     p.getErrorStream().close();
     ```
+
+
+1. WeakHashMap 将 key 加到 WeakReference 而非 value，是因为在 HashMap 中 key 具有唯一性，而 value 可能同时存在不同 key 中，不能实现部分回收，且若要 value 能被及时回收，只要将其加入 WeakReference 再放入 HashMap 即可；WeakHashMap 使用强引用常量 NULL_KEY 来代替 null，导致其无法被回收，value 的强引用需要再次操作 WeakHashMap 才能去除
+
+1. clone 方法应调用 super.clone() 以返回正确的对象类型，clone 其每个引用型成员变量，加上 implements Cloneable，但 final 引用型成员变量无法 clone，且避免调用可重写方法以防止子类覆写导致其调用 super.clone() 出错，最重要的是确认所有的父类是否也满足这些要求。综上所述，应优先考虑拷贝构造器，而不是覆写 clone 方法
+
+1. 实现 toString 方法，并说明相应的格式样例
+
+1. finalize 被动释放相关资源，通常用于对功能和性能没有影响的资源，无法保证一定会被执行，且即使执行也会由于低优先级而延长对象回收时间
