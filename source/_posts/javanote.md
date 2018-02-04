@@ -68,7 +68,7 @@ Java 中一些常被忽略的地方。
 
 1. Date 和 Calendar 的月份从 0 开始，表示一月；星期从 1 开始，表示周日；Date 无时区，new Date(0) 为标准零时，即北京时间 8 点， Calendar 默认当地时区，Calendar.getInstance().clear() 为当地时间零时；Java8 用 java.time 包代替，线程安全类
 
-1. equals 重写规则
+1. equals 重写规则，利用 Double.compare、Float.compare、Arrays.equals 和 Arrays.hashCode 方法
     ```java
     @Override
     public boolean equals(Object obj) {
