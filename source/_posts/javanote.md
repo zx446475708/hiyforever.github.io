@@ -1,7 +1,7 @@
 ---
 title: Java 日常笔记
 date: 2017-07-15 18:47:33
-updated: 2018-01-06 22:50:46
+updated: 2018-02-06 23:18:46
 categories:
     - java
 tags:
@@ -55,6 +55,8 @@ Java 中一些常被忽略的地方。
     0
     true
     ```
+
+1. 考虑实现 Comparable 接口，不要使用差值以免溢出
 
 1. Math.abs(Integer.MIN_VALUE) < 0
 
